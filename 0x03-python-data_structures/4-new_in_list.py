@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 def new_in_list(my_list, idx, element):
-
-    draft = len(my_list)
+    new_cpy = my_list[:]
+    draft = len(new_cpy)
 
     if idx < 0 or idx >= draft:
-        return my_list
-    my_list[idx] = element
-    return my_list
+        return new_cpy
+
+    new_cpy[idx] = element
+    return new_cpy
